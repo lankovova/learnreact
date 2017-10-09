@@ -24,7 +24,7 @@ class TodoApp extends React.Component {
 
 		if (!todoText) return;
 
-		const todo = { id: ++this.state.idCounter, text: todoText};
+		const todo = {id: ++this.state.idCounter, text: todoText};
 
 		this.setState(prevState => {
 			prevState.todos.push(todo);
@@ -44,7 +44,7 @@ class TodoApp extends React.Component {
 		return (
 			<div className="TodoAppWrapper">
 				<div className="TodoApp">
-					<TodoForm addTodo={this.addTodo}/>
+					<TodoForm addTodo={this.addTodo} />
 					<TodoList todos={this.state.todos} removeTodo={this.removeTodo} />
 				</div>
 			</div>
